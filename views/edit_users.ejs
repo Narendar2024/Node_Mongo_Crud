@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css"
+        integrity="sha512-aqT9YD5gLuLBr6ipQAS+72o5yHKzgZbGxEh6iY8lW/r6gG14e2kBTAJb8XrxzZrMOgSmDqtLaF76T0Z6YY2IHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <center>
+        <h1>Edit User</h1>
+    </center>
+    <div class="container">
+        <form action="/edit/<%= user._id %>" method="post" id="edit-form">
+            <div class="mb-3">
+                <label for="exampleInputname" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="exampleInputname" aria-describedby="emailHelp"
+                    value="<%= user.name %>">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" value="<%= user.email %>">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPh" class="form-label">Phone NO</label>
+                <input type="text" name="phone" class="form-control" id="exampleInputPh" value="<%= user.phone %>">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputAge" class="form-label">Age</label>
+                <input type="text" name="age" class="form-control" id="exampleInputAge" value="<%= user.age %>">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputAge" class="form-label">Location</label>
+                <input type="text" name="location" class="form-control" id="exampleInputAge" value="<%= user.age %>">
+            </div>
+
+            <input type="submit" name="submit" value="Update User" class="btn btn-primary">
+
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.bundle.min.js"
+        integrity="sha512-43iShtbiyImxjjU4a9rhXBy7eKtIsrpll8xKhe1ghKqh5NyfME8phZs5JRFZpRBe1si44WM3tNmnqMym7JRmDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
